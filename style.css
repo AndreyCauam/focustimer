@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --font-color: hsl(240, 6%, 21%);
+  --font-color-dark: hsl(0, 0%, 100%);
+  --bg-color: hsl(0, 0, 100%);
+  --bg-color-dark: hsl(0, 0%, 0%);
+  --bg-card: hsl(240, 9%, 89%);
+  --bg-cardSelection: hsl(194, 97%, 31%);
+  --bg-cardDark: hsl(240, 6%, 17%);
+  --color-icone: hsl(240, 7%, 78%);
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--font-color);
+
+  margin: 19.2rem auto;
+  max-height: 100vh;
+}
+
+/* DARK MODE */
+
+.page-dark {
+  background-color: var(--bg-color-dark);
+  color: var(--font-color-dark);
+}
+
+.page-dark #controls button svg path {
+  fill: var(--color-icone);
+}
+
+.page-dark #sounds .card-1,
+.page-dark #sounds .card-2,
+.page-dark #sounds .card-3,
+.page-dark #sounds .card-4 {
+  background-color: var(--bg-cardDark);
+}
+
+.page-dark #sounds .active {
+  background: var(--bg-cardSelection);
+}
+
+.page-dark #sounds button svg path {
+  fill: var(--color-icone);
+}
+
+.page-dark #sounds input[type='range'],
+.page-dark #sounds input[type='range']::-webkit-slider-thumb {
+  background-color: var(--font-color-dark);
+}
+
+/* -------------- */
+
+.page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+
+  gap: 19.2rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+span {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12.6rem;
+  line-height: 14.8rem;
+
+  text-align: center;
+
+  margin-bottom: 4.8rem;
+}
+
+#controls {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+#sounds {
+  max-width: 30rem;
+  max-height: 33rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 3.2rem;
+}
+
+#sounds .card-1,
+.card-2,
+.card-3,
+.card-4 {
+  position: relative;
+  width: 13.8rem;
+  height: 15.2rem;
+  border-radius: 2.4rem;
+  cursor: pointer;
+  background: var(--bg-card);
+}
+
+#sounds svg {
+  position: absolute;
+  left: 4.3rem;
+  bottom: 4.8rem;
+}
+
+#sounds .active {
+  background: var(--bg-cardSelection);
+}
+
+#sounds .active svg path {
+  fill: white;
+}
+
+.dark-mode {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.dark-mode button {
+  background-color: transparent;
+  position: absolute;
+  right: 5rem;
+  bottom: 12rem;
+}
+
+.dark svg path {
+  fill: rgb(0, 0, 0);
+}
+
+.ligth svg path {
+  fill: white;
+}
+
+.hide {
+  display: none;
+}
+
+#sounds input[type='range'] {
+  -webkit-appearance: none;
+  position: absolute;
+  bottom: 2.4rem;
+  left: 2.5rem;
+
+  border-radius: 5rem;
+  background-color: var(--font-color);
+
+  width: 9rem;
+  height: 0.5rem;
+}
+
+#sounds input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background-color: var(--font-color);
+}
+
+@media (max-width: 850px) {
+  .page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10rem;
+  }
+}
