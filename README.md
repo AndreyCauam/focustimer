@@ -9,6 +9,8 @@
 
 - Criação de sliders de volume atráves do input range e javascript
 - Implementação do Darkmode
+- Responsividade
+- Animação dos cards através do css e javascript
 
 ![focus2](https://user-images.githubusercontent.com/102907220/184652687-9b48b983-2b5e-4ae7-b40b-f3aa59a5ce24.PNG)
 
